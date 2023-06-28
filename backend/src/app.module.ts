@@ -8,6 +8,7 @@ import { TypeOrmConfigService } from './configs/orm-configs.service';
 import { Resource } from './entity/resource.entity';
 import { TokenSearch } from './entity/token-search.entity';
 import { StringSearch } from './entity/string-search.entity';
+import { TokenSearchService } from './services/token-search.service';
 
 @Module({
   imports: [
@@ -16,9 +17,10 @@ import { StringSearch } from './entity/string-search.entity';
   ],
   controllers: [AppController],
   providers: [
-        StringSearchService, 
-        SearchService,
-        AppService
+    TokenSearchService,
+    StringSearchService, 
+    SearchService,
+    AppService
   ],
 })
 export class AppModule {}

@@ -9,7 +9,6 @@ export class TokenSearchService {
   constructor(
     @InjectRepository(TokenSearch)
     private tokenRepository: Repository<TokenSearch>,
-    
   ) {}
 
 

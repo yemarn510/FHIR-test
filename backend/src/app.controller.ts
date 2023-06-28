@@ -9,11 +9,9 @@ export class AppController {
   @Get('')
   async searchPatient(
     @Param() params: { uuid: string },
-    @Query() query: any
+    @Query() query: { [key in string]: string }
   ): Promise<Resource | null> {
     return this.appService.searchPatient(query);
-    // return 'ok';
-    // return await this.appService.getPatient(params.uuid);
   }
 
   @Get(':uuid')
