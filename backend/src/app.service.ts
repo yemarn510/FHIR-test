@@ -52,6 +52,7 @@ export class AppService {
 
   async searchPatient(params: { [key in string]: string }): Promise<Resource | null> {
     const keys = {};
+
     Object.keys(params).forEach(rawKeys => {
       const keyOnly = rawKeys.split(':')[0];
       keys[keyOnly] = rawKeys || '';

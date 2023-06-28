@@ -17,7 +17,7 @@ export class AppController {
   @Get(':uuid')
   async getPatient(
     @Param() params: { type: string, uuid: string },
-    @Query() query: any
+    @Query() query: { [key in string]: string }
   ): Promise<Resource | null> {
 
     if (!params?.uuid) {
